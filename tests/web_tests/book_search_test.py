@@ -5,7 +5,7 @@ from litres_project.pages.web_pages.main_page import main_page
 
 
 @allure.epic('Search')
-@allure.label("owner", "flowerfrog")
+@allure.label("owner", "TemirkhanovaMS")
 @allure.feature("Checking the book search on the main page")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'web', 'normal')
@@ -31,7 +31,7 @@ def test_searching_of_book_by_title():
 
 
 @allure.epic('Search')
-@allure.label("owner", "flowerfrog")
+@allure.label("owner", "TemirkhanovaMS")
 @allure.feature("Checking the book search on the main page")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'web', 'normal')

@@ -1,4 +1,6 @@
 from selene import browser, be, have
+import pyperclip
+from selenium.webdriver import Keys
 
 
 class MainPage:
@@ -26,18 +28,20 @@ class MainPage:
         return self
 
     def search_book_by_title(self, book):
-        # browser.element('[data-testid="search__input"]').should(be.blank).type(book.name)
-        browser.element('[data-testid="search__input"]').should(be.blank).type('Война и мир')
+        pyperclip.copy(book.name)
+        browser.element('[data-testid="search__input"]').click()
+        browser.element('[data-testid="search__input"]').press(Keys.CONTROL + 'v')
         browser.element('[data-testid="search__button"]').should(be.visible).click()
         return self
 
     def book_with_specified_title_must_be_found(self):
-        # browser.element('[data-testid="art__title"]:nth-child(1)').should(have.text('Семь сестер'))
-        browser.element('[data-testid="art__title"]:nth-child(1)').should(have.text('Война и мир'))
+        browser.element('[data-testid="art__title"]:nth-child(1)').should(have.text('Семь сестер'))
         return self
 
     def search_book_by_author(self, book):
-        browser.element('[data-testid="search__input"]').should(be.blank).type(book.author)
+        pyperclip.copy(book.author)
+        browser.element('[data-testid="search__input"]').click()
+        browser.element('[data-testid="search__input"]').press(Keys.CONTROL + 'v')
         browser.element('[data-testid="search__button"]').should(be.visible).click()
         return self
 

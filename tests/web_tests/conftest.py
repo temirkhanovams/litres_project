@@ -81,8 +81,9 @@ def load_env():
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
     browser.config.base_url = 'https://www.litres.ru/'
-    browser.config.window_width = 1024
-    browser.config.window_height = 780
+    browser.config.timeout = 5.0
+    browser.config.window_width = 1920
+    browser.config.window_height = 1080
     driver_options = webdriver.ChromeOptions()
 
     driver_options.page_load_strategy = 'eager'

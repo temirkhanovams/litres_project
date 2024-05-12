@@ -39,18 +39,18 @@ class BookPage:
 
     def book_must_be_added_to_favorites(self, book):
         browser.open("my-books/liked/")
-        browser.element('[data-test-id="art__title--desktop"]').should(have.text(book.name))
-        browser.element('[data-test-id="art__authorName--desktop"]').should(have.text(book.author))
+        browser.element('[data-testid="art__title"]').should(have.text(book.name))
+        browser.element('[data-testid="art__authorName"]').should(have.text(book.author))
         return self
 
     def removing_book_from_favorites(self):
         browser.open("my-books/liked/")
-        browser.element('div.ArtV2Default-module__like_button_1VLId > div').should(be.visible).click()
-        browser.element('//*[@id=":r4:"]/div/div/div[3]').should(be.visible).click()
+        browser.element('[data-testid="art__wrapper"] [data-testid="popover__baseElement"]').should(be.visible).click()
+        browser.element('[data-testid="popover__content"] div:nth-child(3)').should(be.visible).click()
         return self
 
     def book_must_be_removed_from_favorites(self):
-        browser.element('.EmptyState-module__empty__content_2lpJ-').should(have.text('Здесь будет все, что вы '
+        browser.element('[data-testid="myBooks__emptyState"]').should(have.text('Здесь будет все, что вы '
                                                                                      'отложите на потом'))
         return self
 

@@ -4,7 +4,7 @@ from litres_project.pages.web_pages.book_page import book_page
 
 
 @allure.epic('Move book to/from favorites')
-@allure.label("owner", "flowerfrog")
+@allure.label("owner", "TemirkhanovaMS")
 @allure.feature("Checking whether a book has been added or removed from favorites")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'web', 'normal')
@@ -30,7 +30,7 @@ def test_adding_book_to_favorites():
 
 
 @allure.epic('Move book to/from favorites')
-@allure.label("owner", "flowerfrog")
+@allure.label("owner", "TemirkhanovaMS")
 @allure.feature("Checking whether a book has been added or removed from favorites")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'web', 'normal')
