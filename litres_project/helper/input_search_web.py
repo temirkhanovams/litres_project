@@ -1,7 +1,7 @@
+import functools
+
 from selene.core.command import *
 from selene.core.wait import Command
-from selene import Element
-import functools
 
 
 def press_sequentially(keys: str):
