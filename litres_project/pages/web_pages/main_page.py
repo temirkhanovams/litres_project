@@ -27,7 +27,7 @@ class MainPage:
         return self
 
     def search_book_by_title(self, book):
-        browser.element('[data-testid="search__input"]').click().perform(press_sequentially(f'{book.title}'))
+        browser.element('[data-testid="search__input"]').click().perform(press_sequentially(f'{book.name}'))
         browser.element('[data-testid="search__button"]').should(be.visible).click()
         return self
 
