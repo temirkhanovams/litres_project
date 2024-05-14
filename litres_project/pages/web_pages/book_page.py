@@ -12,7 +12,8 @@ class BookPage:
         return self
 
     def book_must_be_added_to_cart(self, book):
-        browser.open("my-books/cart/")
+        # browser.open("my-books/cart/")
+        browser.element('[data-testid="tab-basket"]').should(be.visible).click()
         browser.element('[data-testid="cart__bookCardTitle--wrapper"]').should(have.text(book.name))
         browser.element('[data-testid="cart__bookCardAuthor--wrapper"]').should(have.text(book.author))
         browser.element('[data-testid="cart__bookCardDiscount--wrapper"]').should(have.text(book.price))
