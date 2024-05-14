@@ -1,6 +1,5 @@
 from selene import browser, be, have
-from selenium.webdriver import Keys
-from project_diploma.utils.input_search_web import press_sequentially
+from litres_project.helper.input_search_web import press_sequentially
 
 
 class MainPage:
