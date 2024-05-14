@@ -8,7 +8,7 @@ class BookPage:
 
     def adding_book_to_cart(self):
         browser.element('[data-testid="book__addToCartButton"]').should(be.visible).click()
-        browser.driver.refresh()
+        # browser.driver.refresh()
         return self
 
     def book_must_be_added_to_cart(self, book):

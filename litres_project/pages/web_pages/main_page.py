@@ -17,7 +17,7 @@ class MainPage:
         return self
 
     def user_must_be_authorized(self, user):
-        browser.element('.ProfileButton_profileButton__title__GV_yX').should(be.visible).click()
+        browser.element('[data-testid="header__profile-button"]').should(be.visible).click()
         browser.open("pages/personal_cabinet_about_me/")
         browser.element('span[class="user_header__name"]').should(have.text(user.name))
         return self
