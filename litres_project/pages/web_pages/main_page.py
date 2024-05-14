@@ -1,5 +1,5 @@
 from selene import browser, be, have
-import pyperclip
+# import pyperclip
 from selenium.webdriver import Keys
 
 
@@ -27,27 +27,27 @@ class MainPage:
                                                                                      'пароля'))
         return self
 
-    def search_book_by_title(self, book):
-        pyperclip.copy(book.name)
-        browser.element('[data-testid="search__input"]').click()
-        browser.element('[data-testid="search__input"]').press(Keys.CONTROL + 'v')
-        browser.element('[data-testid="search__button"]').should(be.visible).click()
-        return self
-
-    def book_with_specified_title_must_be_found(self):
-        browser.element('[data-testid="art__title"]:nth-child(1)').should(have.text('Семь сестер'))
-        return self
-
-    def search_book_by_author(self, book):
-        pyperclip.copy(book.author)
-        browser.element('[data-testid="search__input"]').click()
-        browser.element('[data-testid="search__input"]').press(Keys.CONTROL + 'v')
-        browser.element('[data-testid="search__button"]').should(be.visible).click()
-        return self
-
-    def book_with_specified_author_must_be_found(self, book):
-        browser.element('[data-testid="art__authorName"]:nth-child(1)').should(have.text(book.author))
-        return self
+    # def search_book_by_title(self, book):
+    #     pyperclip.copy(book.name)
+    #     browser.element('[data-testid="search__input"]').click()
+    #     browser.element('[data-testid="search__input"]').press(Keys.CONTROL + 'v')
+    #     browser.element('[data-testid="search__button"]').should(be.visible).click()
+    #     return self
+    #
+    # def book_with_specified_title_must_be_found(self):
+    #     browser.element('[data-testid="art__title"]:nth-child(1)').should(have.text('Семь сестер'))
+    #     return self
+    #
+    # def search_book_by_author(self, book):
+    #     pyperclip.copy(book.author)
+    #     browser.element('[data-testid="search__input"]').click()
+    #     browser.element('[data-testid="search__input"]').press(Keys.CONTROL + 'v')
+    #     browser.element('[data-testid="search__button"]').should(be.visible).click()
+    #     return self
+    #
+    # def book_with_specified_author_must_be_found(self, book):
+    #     browser.element('[data-testid="art__authorName"]:nth-child(1)').should(have.text(book.author))
+    #     return self
 
 
 main_page = MainPage()
