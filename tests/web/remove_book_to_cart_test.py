@@ -21,20 +21,11 @@ def test_removing_book_from_cart():
         price='339 ₽'
     )
 
-    with allure.step("Open the book page"):
-        book_page.open(book)
-
-    with allure.step("Adding the selected book to the cart"):
-        book_page.adding_book_to_cart()
-
-    with allure.step("Open the cart page"):
-        cart_page.open()
-
-    with allure.step("Removing the selected book from cart"):
-        cart_page.removing_book_to_cart()
-
-    with allure.step("Checking that the book has been removed from cart"):
-        cart_page.book_must_be_removed_from_cart()
+    book_page.open(book)
+    book_page.adding_book_to_cart()
+    cart_page.open()
+    cart_page.removing_book_to_cart()
+    cart_page.book_must_be_removed_from_cart()
 
 
 @allure.epic('Remove book from cart')
@@ -53,20 +44,9 @@ def test_removing_book_from_cart_and_adding_to_favorites():
         price='339 ₽'
     )
 
-    with allure.step("Open the book page"):
-        book_page.open(book)
-
-    with allure.step("Adding the selected book to the cart"):
-        book_page.adding_book_to_cart()
-
-    with allure.step("Open the cart page"):
-        cart_page.open()
-
-    with allure.step("Removing the selected book from cart and adding book to favorites"):
-        cart_page.removing_book_to_cart_and_adding_to_favorites()
-
-    with allure.step("Checking that the book has been removed from cart"):
-        cart_page.book_must_be_removed_from_cart()
-
-    with allure.step("Checking that the book has been added to favorites"):
-        book_page.book_must_be_added_to_favorites(book)
+    book_page.open(book)
+    book_page.adding_book_to_cart()
+    cart_page.open()
+    cart_page.removing_book_to_cart_and_adding_to_favorites()
+    cart_page.book_must_be_removed_from_cart()
+    book_page.book_must_be_added_to_favorites(book)

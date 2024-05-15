@@ -5,7 +5,7 @@ from litres_project.pages.web.main_page import main_page
 
 
 @allure.epic('Authorized')
-@allure.label("owner", "flowerfrog")
+@allure.label("owner", "TemirkhanovaMS")
 @allure.feature("Checking the authorization of the user")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'web', 'normal')
@@ -19,18 +19,13 @@ def test_authorization_registered_user():
         password=os.getenv('USER_PASSWORD')
     )
 
-    with allure.step("Open the main page"):
-        main_page.open()
-
-    with allure.step("Filling the authorization form"):
-        main_page.filling_authorization_form(user)
-
-    with allure.step("Checking that user has been authorized"):
-        main_page.user_must_be_authorized(user)
+    main_page.open()
+    main_page.filling_authorization_form(user)
+    main_page.user_must_be_authorized(user)
 
 
 @allure.epic('Authorized')
-@allure.label("owner", "flowerfrog")
+@allure.label("owner", "TemirkhanovaMS")
 @allure.feature("Checking the authorization of the user")
 @allure.label('microservice', 'WEB')
 @allure.tag('regress', 'web', 'normal')
@@ -44,11 +39,6 @@ def test_authorization_unregistered_user():
         password=os.getenv('UNREGISTERED_USER_PASSWORD')
     )
 
-    with allure.step("Open the main page"):
-        main_page.open()
-
-    with allure.step("Filling the authorization form"):
-        main_page.filling_authorization_form(user)
-
-    with allure.step("Checking that user has not been authorized"):
-        main_page.user_must_not_be_authorized()
+    main_page.open()
+    main_page.filling_authorization_form(user)
+    main_page.user_must_not_be_authorized()

@@ -19,14 +19,9 @@ def test_adding_book_to_favorites():
         price=''
     )
 
-    with allure.step("Open the book page"):
-        book_page.open(book)
-
-    with allure.step("Adding a book to favorites"):
-        book_page.adding_book_to_favorites()
-
-    with allure.step("Checking that the book has been added to favorites"):
-        book_page.book_must_be_added_to_favorites(book)
+    book_page.open(book)
+    book_page.adding_book_to_favorites()
+    book_page.book_must_be_added_to_favorites(book)
 
 
 @allure.epic('Move book to/from favorites')
@@ -45,14 +40,7 @@ def test_removing_book_from_favorites():
         price=''
     )
 
-    with allure.step("Open the book page"):
-        book_page.open(book)
-
-    with allure.step("Adding a book to favorites"):
-        book_page.adding_book_to_favorites()
-
-    with allure.step("Removing a book to favorites"):
-        book_page.removing_book_from_favorites()
-
-    with allure.step("Checking that the book has been removed from favorites"):
-        book_page.book_must_be_removed_from_favorites()
+    book_page.open(book)
+    book_page.adding_book_to_favorites()
+    book_page.removing_book_from_favorites()
+    book_page.book_must_be_removed_from_favorites()
