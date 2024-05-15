@@ -1,7 +1,7 @@
 import os
 import allure
 from litres_project.data.users import User
-from litres_project.pages.web_pages.main_page import main_page
+from litres_project.pages.web.main_page import main_page
 
 
 @allure.epic('Authorized')

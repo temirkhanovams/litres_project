@@ -494,4 +494,4 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 !/.env
-/tests/api_tests/allure-results/
+/tests/api/allure-results/

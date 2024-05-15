@@ -1,6 +1,6 @@
 import allure
 from litres_project.data.books import Book
-from litres_project.pages.web_pages.book_page import book_page
+from litres_project.pages.web.book_page import book_page
 
 
 @allure.epic('Add book to cart')
