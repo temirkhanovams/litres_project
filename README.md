@@ -89,7 +89,7 @@ allure.bat serve
 
 ----
 ### Полная статистика по прохождению тестпланов, отчёты и приложения к ним хранятся в Allure TestOps
-> <a target="_blank" href="https://allure.autotests.cloud/project/3942/dashboards">Ссылка на проект в AllureTestOps</a> (запрос доступа `admin@qa.guru`)
+> <a target="_blank" href="https://allure.autotests.cloud/project/4231/dashboards">Ссылка на проект в AllureTestOps</a> (запрос доступа `admin@qa.guru`)
 
 #### Тест-планы проекта
 ![This is an image](design/image/allure_TestOps_test_plans.png)
